@@ -48,14 +48,14 @@ public class DataGenerator {
             return user;
         }
 
-        public static Registration addUserPasswordInvalid() {
+        public static Registration addUserLoginInvalid() {
             String password = getPassword();
             Registration user = new Registration(getLogin(), password, "active");
             registerUser(user);
             return new Registration(getLogin(), password, "active");
         }
 
-        public static Registration addUserLoginInvalid() {
+        public static Registration addUserPasswordInvalid() {
             String login = getLogin();
             Registration user = new Registration(login, getPassword(), "active");
             registerUser(user);

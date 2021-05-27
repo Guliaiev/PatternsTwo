@@ -16,7 +16,7 @@ public class AutoLoginTest {
     }
 
     @Test
-    void ShouldValidAll() {
+    void shouldValidAll() {
         Registration testUser = addUserValid();
         $("[data-test-id=login] input").setValue(testUser.getLogin());
         $("[data-test-id=password] input").setValue(testUser.getPassword());
@@ -25,7 +25,7 @@ public class AutoLoginTest {
     }
 
     @Test
-    void AllInputBlocked() {
+    void allInputBlocked() {
         Registration testUser = addUserBlocked();
         $("[data-test-id=login] input").setValue(testUser.getLogin());
         $("[data-test-id=password] input").setValue(testUser.getPassword());
@@ -34,7 +34,7 @@ public class AutoLoginTest {
     }
 
     @Test
-    void ShouldLoginInvalid() {
+    void shouldLoginInvalid() {
         Registration testUser = addUserLoginInvalid();
         $("[data-test-id=login] input").setValue(testUser.getLogin());
         $("[data-test-id=password] input").setValue(testUser.getPassword());
@@ -43,7 +43,7 @@ public class AutoLoginTest {
     }
 
     @Test
-    void ShouldPasswordInvalid() {
+    void shouldPasswordInvalid() {
         Registration testUser = addUserPasswordInvalid();
         $("[data-test-id=login] input").setValue(testUser.getLogin());
         $("[data-test-id=password] input").setValue(testUser.getPassword());
@@ -52,7 +52,7 @@ public class AutoLoginTest {
     }
 
     @Test
-    void UserNotRegistered() {
+    void userNotRegistered() {
         Registration testUser = addUserNotRegistered();
         $("[data-test-id=login] input").setValue(testUser.getLogin());
         $("[data-test-id=password] input").setValue(testUser.getPassword());
